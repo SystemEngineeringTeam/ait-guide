@@ -6,19 +6,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "run-p lint:*",
+    "lint:prettier": "prettier --check ./",
+    "lint:eslint": "eslint --ext .js,jsx,.ts,.tsx",
+    "fix": "run-p fix:*",
+    "fix:prettier": "prettier  --write ./",
+    "fix:lint": "eslint --ext .js,jsx,.ts,.tsx --fix"
   },
   "dependencies": {
+    "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import-access": "^2.1.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.4",
+    "typescript": "^5"
   }
 }
