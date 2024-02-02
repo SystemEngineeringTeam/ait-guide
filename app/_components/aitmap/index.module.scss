@@ -1,0 +1,79 @@
+.map_wrapper {
+  * {
+    transition: all 0.3s ease;
+  }
+
+  .cls_1 {
+    fill: #f1eefd;
+  }
+
+  .cls_2,
+  .cls_3 {
+    fill: #aad3df;
+  }
+
+  .cls_4,
+  .cls_5 {
+    fill: var(--primary);
+  }
+
+  .cls_6,
+  .cls_7 {
+    fill: #d9d0c9;
+  }
+
+  .cls_8 {
+    opacity: 0.6;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+  }
+
+  .cls_8,
+  .cls_9 {
+    fill: none;
+  }
+
+  .cls_10,
+  .cls_17 {
+    fill: #e5e6ea;
+    stroke: #cecce2;
+  }
+
+  .cls_10,
+  .cls_12 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls_10,
+  .cls_13,
+  .cls_7,
+  .cls_5,
+  .cls_3 {
+    fill-rule: evenodd;
+  }
+
+  .cls_12 {
+    fill: #d7dce4;
+    stroke: #c0cad5;
+  }
+
+  .cls_13 {
+    fill: #f7f6f6;
+  }
+
+  .cls_9 {
+    stroke: #b9a99c;
+    stroke-width: 0.75px;
+  }
+
+  .cls_15 {
+    fill: var(--primary-light);
+  }
+
+  .pickup,
+  .pickup * {
+    fill: var(--tertiary);
+    stroke: var(--background-dark);
+  }
+}
