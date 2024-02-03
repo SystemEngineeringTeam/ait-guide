@@ -9,7 +9,7 @@ export default function AitMap(props: Props) {
   const { pickup } = props;
 
   return (
-    <div className={styles.map_wrapper}>
+    <div className={styles.map_wrapper} id="map">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="170 170 1250 700">
         <polygon
           className={styles.cls_13}
