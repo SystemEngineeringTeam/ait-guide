@@ -1,8 +1,10 @@
 .header {
+  height: var(--header-height);
   padding: 0 20px;
   background-color: var(--primary);
-
-  .title {
-    color: var();
-  }
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
