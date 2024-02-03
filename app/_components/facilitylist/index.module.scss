@@ -1,0 +1,42 @@
+.facilitylist {
+  padding: 50px 10px 10px;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    padding: 50px 50px 10px;
+  }
+
+  h3 {
+    padding: 10px;
+  }
+
+  .container {
+    .buttons {
+      padding: 15px 0;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px 30px;
+
+      .button {
+        padding: 3px 8px;
+        font-size: 0.9rem;
+        background-color: var(--white);
+        border: solid 1px var(--primary);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover[data-active='false'] {
+          box-shadow: var(--shadow) var(--primary);
+          scale: 1.05;
+        }
+
+        &[data-active='true'] {
+          box-shadow: var(--shadow) var(--shadow-color);
+          scale: 1.05;
+        }
+      }
+    }
+  }
+}

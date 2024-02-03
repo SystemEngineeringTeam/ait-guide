@@ -1,0 +1,23 @@
+.search_wrapper {
+  padding: 50px 10px 10px;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    padding: 50px 50px 10px;
+  }
+
+  h3 {
+    padding: 10px;
+  }
+
+  .label {
+    display: block;
+  }
+
+  .search {
+    height: 2rem;
+    width: 250px;
+    padding: 3px 10px;
+    font-size: 1rem;
+  }
+}
