@@ -24,7 +24,7 @@ export const FACILITY_MAP: FacilityMap[] = [
   { id: 18, name: "12号館", type: 1 },
   { id: 19, name: "13号館", type: 1 },
   { id: 20, name: "14号館", type: 1 },
-  { id: 57, name: "正門", type: 2 },
+  { id: 55, name: "正門", type: 2 },
   { id: 49, name: "バス停", type: 2 },
   { id: 50, name: "守衛室", type: 2 },
   { id: 32, name: "愛和会館", type: 2 },
@@ -56,13 +56,11 @@ export const FACILITY_MAP: FacilityMap[] = [
   { id: 41, name: "庭球場管理ハウス", type: 5 },
   { id: 42, name: "セントラル広場", type: 5 },
   { id: 44, name: "テニスコート", type: 5 },
-  { id: 45, name: "サッカー場", type: 5 },
-  { id: 53, name: "サッカー場", type: 5 },
   { id: 51, name: "アーチェリー場", type: 5 },
+  { id: 45, name: "サッカー場", type: 5 },
   { id: 52, name: "陸上競技場", type: 5 },
-  { id: 54, name: "球技場", type: 5 },
-  { id: 55, name: "野球場", type: 5 },
-  { id: 56, name: "球技場", type: 5 },
+  { id: 53, name: "球技場", type: 5 },
+  { id: 54, name: "野球場", type: 5 },
 ] as const;
 
 export const GROUPED_FACILITY_MAP: FacilityMap[][] = types.map((t) => FACILITY_MAP.filter((f) => f.type === t));

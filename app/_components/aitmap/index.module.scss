@@ -85,7 +85,8 @@
     .pickup,
     .pickup * {
       fill: var(--tertiary);
-      stroke: var(--background-dark);
+      stroke: var(--black);
+      stroke-width: 1px;
     }
   }
 }
