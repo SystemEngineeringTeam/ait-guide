@@ -2,36 +2,63 @@
 
 import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
 import styles from './index.module.scss';
-import { FACILITY_MAP } from '@/const/facility';
+import { FACILITY_MAP, FacilityMap } from '@/const/facility';
+import { ROOM_MAP, RoomMap } from '@/const/room';
 
 type Props = {
   pickup: number;
   setPickup: Dispatch<SetStateAction<number>>;
 };
 
+const MAX_DISPLAY = 15;
+
+// 文字列を半角,大文字に変換, ーをｰに変換, 、を,に変換, ひらがなをカタカナに変換
+function toHankakuUpperCase(str: string) {
+  return str
+    .replace('ごう', '号')
+    .replace('かん', '館')
+    .replace(/ー/, '-')
+    .replace(/、/, ',')
+    .toUpperCase()
+    .replace(/[Ａ-Ｚ０-９]/g, (s) => {
+      return String.fromCharCode(s.charCodeAt(0) - 0xfee0);
+    })
+    .replace(/[ぁ-ん]/g, (s) => {
+      return String.fromCharCode(s.charCodeAt(0) + 0x60);
+    });
+}
+
 export default function Search(props: Props) {
   const { pickup, setPickup } = props;
 
   const [searchWord, setSearchWord] = useState('');
-  const [results, setResults] = useState([] as typeof FACILITY_MAP);
+  const [filterdFacility, setFilterdFacility] = useState([] as FacilityMap[]);
+  const [filterdRoom, setFilterdRoom] = useState([] as RoomMap[]);
 
   function search(e: ChangeEvent<HTMLInputElement>) {
-    const searchWordSnap = e.target.value;
-    setSearchWord(searchWordSnap);
+    const { value } = e.target;
+    const searchWordSnap = toHankakuUpperCase(value);
+    console.log({ searchWordSnap });
+    setSearchWord(value);
 
     if (searchWordSnap === '') {
-      setResults([]);
+      setFilterdFacility([]);
+      setFilterdRoom([]);
       return;
     }
 
-    const res = FACILITY_MAP.filter((f) => {
+    const resFacility = FACILITY_MAP.filter((f) => {
       return f.name.includes(searchWordSnap);
     });
+    const resRoom = ROOM_MAP.filter((r) => {
+      return r.room.includes(searchWordSnap);
+    });
 
-    if (res.length === 0) return;
+    if (resFacility.length === 0 && resRoom.length === 0) return;
 
     setPickup(0);
-    setResults(res);
+    setFilterdFacility(resFacility);
+    setFilterdRoom(resRoom);
   }
 
   return (
@@ -47,8 +74,25 @@ export default function Search(props: Props) {
         value={searchWord}
         onChange={search}
       />
+
       <div className={styles.buttons}>
-        {results.map((f) => (
+        {filterdRoom.slice(0, MAX_DISPLAY).map((r) => (
+          <button
+            key={r.room}
+            className={`${styles.button} ${styles.room}`}
+            // data-active={pickup === r.buildId}
+            onClick={() => setPickup(r.buildId)}
+          >
+            {r.room}({FACILITY_MAP.find((f) => f.id === r.buildId)?.name})
+          </button>
+        ))}
+        {filterdRoom.length > MAX_DISPLAY && (
+          <p>他{filterdRoom.length - 15}件...</p>
+        )}
+      </div>
+
+      <div className={styles.buttons}>
+        {filterdFacility.slice(0, MAX_DISPLAY).map((f) => (
           <button
             key={f.id}
             className={styles.button}
@@ -58,6 +102,9 @@ export default function Search(props: Props) {
             {f.name}
           </button>
         ))}
+        {filterdFacility.length > MAX_DISPLAY && (
+          <p>他{filterdFacility.length - 15}件...</p>
+        )}
       </div>
     </section>
   );

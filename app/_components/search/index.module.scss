@@ -39,6 +39,10 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
+      &.room {
+        border-color: var(--blue);
+      }
+
       &:hover[data-active='false'] {
         box-shadow: var(--shadow) var(--primary);
         scale: 1.05;
