@@ -1,11 +1,6 @@
-import { Dispatch, SetStateAction } from 'react';
 import styles from './index.module.scss';
 
-type Props = {
-  setPickup: Dispatch<SetStateAction<number>>;
-};
-
-export default function Search(props: Props) {
+export default function Search() {
   return (
     <section className={styles.search_wrapper} id="search">
       <h3>
