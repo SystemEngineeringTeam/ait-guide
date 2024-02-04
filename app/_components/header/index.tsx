@@ -3,8 +3,8 @@ import styles from './index.module.scss';
 export default function Header() {
   const menues = [
     { name: '検索', href: '#search' },
-    { name: '施設一覧', href: '#facility-list' },
     { name: '学内マップ', href: '#map' },
+    { name: '施設一覧', href: '#facility-list' },
   ];
 
   return (
