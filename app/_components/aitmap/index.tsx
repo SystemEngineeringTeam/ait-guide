@@ -1,4 +1,6 @@
-import { Dispatch, SetStateAction } from 'react';
+'use client';
+
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import styles from './index.module.scss';
 import { FACILITY_MAP } from '@/const/facility';
 import { PickUp } from '@/const/pickup';
@@ -9,11 +11,22 @@ type Props = {
   setPickup: Dispatch<SetStateAction<PickUp>>;
 };
 
+type Precent = [number, number] | null;
+
 export default function AitMap(props: Props) {
   const { pickup, setPickup } = props;
 
+  const [precent, setPrecent] = useState<Precent>(null);
   const facility = FACILITY_MAP.find((f) => f.id === pickup.facility);
   const position = facility && toPercent(...facility.coordinate);
+
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+    navigator.permissions.query({ name: 'geolocation' });
+    navigator.geolocation.watchPosition((e) => {
+      setPrecent(toPercent(e.coords.latitude, e.coords.longitude));
+    });
+  }, []);
 
   return (
     <section className={styles.map_wrapper} id="map">
@@ -27,6 +40,16 @@ export default function AitMap(props: Props) {
           >
             {facility.name}
           </h3>
+        )}
+
+        {precent && (
+          <div
+            className={styles.precent_location}
+            style={{
+              bottom: `${precent[0]}%`,
+              left: `${precent[1]}%`,
+            }}
+          />
         )}
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="170 170 1250 700">

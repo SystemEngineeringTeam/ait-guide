@@ -48,7 +48,7 @@
       white-space: nowrap;
 
       &.room {
-        border-color: var(--blue);
+        border-color: var(--blue-light);
       }
 
       &:hover[data-active='false'] {
