@@ -5,9 +5,10 @@ import AitMap from './_components/aitmap';
 import FacilityList from './_components/facilitylist';
 import Search from './_components/search';
 import styles from './page.module.scss';
+import { INIT_PICKUP, PickUp } from '@/const/pickup';
 
 export default function Home() {
-  const [pickup, setPickup] = useState(0);
+  const [pickup, setPickup] = useState<PickUp>(INIT_PICKUP);
 
   return (
     <main className={styles.main}>

@@ -3,11 +3,12 @@
 import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
 import styles from './index.module.scss';
 import { FACILITY_MAP, FacilityMap } from '@/const/facility';
+import { INIT_PICKUP, PickUp } from '@/const/pickup';
 import { ROOM_MAP, RoomMap } from '@/const/room';
 
 type Props = {
-  pickup: number;
-  setPickup: Dispatch<SetStateAction<number>>;
+  pickup: PickUp;
+  setPickup: Dispatch<SetStateAction<PickUp>>;
 };
 
 const MAX_DISPLAY = 15;
@@ -38,7 +39,6 @@ export default function Search(props: Props) {
   function search(e: ChangeEvent<HTMLInputElement>) {
     const { value } = e.target;
     const searchWordSnap = toHankakuUpperCase(value);
-    console.log({ searchWordSnap });
     setSearchWord(value);
 
     if (searchWordSnap === '') {
@@ -48,26 +48,26 @@ export default function Search(props: Props) {
     }
 
     const resFacility = FACILITY_MAP.filter((f) => {
-      return f.name.includes(searchWordSnap);
+      return f.name.includes(toHankakuUpperCase(searchWordSnap));
     });
     const resRoom = ROOM_MAP.filter((r) => {
-      return r.room.includes(searchWordSnap);
+      return r.room.includes(toHankakuUpperCase(searchWordSnap));
     });
 
     if (resFacility.length === 0 && resRoom.length === 0) return;
 
-    setPickup(0);
+    setPickup(INIT_PICKUP);
     setFilterdFacility(resFacility);
     setFilterdRoom(resRoom);
   }
 
   return (
     <section className={styles.search_wrapper} id="search">
-      <h3>
+      <h2>
         <label htmlFor="search" className={styles.label}>
           施設・教室検索
         </label>
-      </h3>
+      </h2>
       <input
         type="text"
         className={styles.search}
@@ -80,8 +80,8 @@ export default function Search(props: Props) {
           <button
             key={r.room}
             className={`${styles.button} ${styles.room}`}
-            // data-active={pickup === r.buildId}
-            onClick={() => setPickup(r.buildId)}
+            data-active={pickup.room === r.id}
+            onClick={() => setPickup({ facility: r.buildId, room: r.id })}
           >
             {r.room}({FACILITY_MAP.find((f) => f.id === r.buildId)?.name})
           </button>
@@ -96,8 +96,8 @@ export default function Search(props: Props) {
           <button
             key={f.id}
             className={styles.button}
-            data-active={pickup === f.id}
-            onClick={() => setPickup(f.id)}
+            data-active={pickup.facility === f.id}
+            onClick={() => setPickup({ facility: f.id, room: 0 })}
           >
             {f.name}
           </button>

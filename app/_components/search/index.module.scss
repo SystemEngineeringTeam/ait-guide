@@ -6,7 +6,7 @@
     padding: 50px;
   }
 
-  h3 {
+  h2 {
     padding: 10px;
   }
 
@@ -15,8 +15,8 @@
   }
 
   .search {
-    height: 2.2rem;
-    width: 280px;
+    height: 2.5rem;
+    width: 300px;
     padding: 3px 10px;
     font-size: 1.2rem;
   }
@@ -31,13 +31,17 @@
 
     .button {
       width: 200px;
-      padding: 5px 8px;
-      font-size: 0.9rem;
+      padding: 7px 10px;
+      font-size: 1rem;
       background-color: var(--white);
       border: solid 2px var(--primary);
       border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       &.room {
         border-color: var(--blue);

@@ -2,10 +2,12 @@
   padding: 50px 0;
 
   * {
+    paint-order: stroke;
     transition: all 0.3s ease;
+    pointer-events: none;
   }
 
-  h3 {
+  h2 {
     text-align: center;
   }
 
@@ -84,13 +86,14 @@
 
     .selectable {
       cursor: pointer;
+      pointer-events: all;
     }
 
     .pickup,
     .pickup * {
       fill: var(--tertiary);
       stroke: var(--black);
-      stroke-width: 1px;
+      stroke-width: 3px;
     }
   }
 }
