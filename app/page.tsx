@@ -11,9 +11,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Search />
-      <FacilityList pickup={pickup} setPickup={setPickup} />
+      <Search pickup={pickup} setPickup={setPickup} />
       <AitMap pickup={pickup} setPickup={setPickup} />
+      <FacilityList pickup={pickup} setPickup={setPickup} />
     </main>
   );
 }

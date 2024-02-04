@@ -1,9 +1,9 @@
 .search_wrapper {
-  padding: 50px 10px 10px;
+  padding: 30px 10px;
   text-align: center;
 
   @media (min-width: 800px) {
-    padding: 50px 50px 10px;
+    padding: 50px;
   }
 
   h3 {
@@ -15,9 +15,39 @@
   }
 
   .search {
-    height: 2rem;
-    width: 250px;
+    height: 2.2rem;
+    width: 280px;
     padding: 3px 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    padding: 15px 0;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 30px;
+
+    .button {
+      width: 200px;
+      padding: 5px 8px;
+      font-size: 0.9rem;
+      background-color: var(--white);
+      border: solid 2px var(--primary);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover[data-active='false'] {
+        box-shadow: var(--shadow) var(--primary);
+        scale: 1.05;
+      }
+
+      &[data-active='true'] {
+        box-shadow: var(--shadow) var(--shadow-color);
+        scale: 1.05;
+      }
+    }
   }
 }
