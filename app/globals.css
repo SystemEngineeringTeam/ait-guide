@@ -1,5 +1,9 @@
 :root {
-  font-size: 17px;
+  font-size: 14px;
+
+  @media (min-width: 800px) {
+    font-size: 17px;
+  }
 
   --primary: #aae4ba;
   --primary-light: #e0fae9;

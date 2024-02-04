@@ -15,11 +15,18 @@
       padding: 15px 0;
       margin-inline: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 10px 30px;
+      
+      &:nth-of-type(n + 2) {
+        border-top: 1px dashed;
+      }
+
+      @media (max-width: 800px) {
+        gap: 10px;
+      }
 
       .button {
-        width: 200px;
         padding: 7px 10px;
         font-size: 1rem;
         background-color: var(--white);

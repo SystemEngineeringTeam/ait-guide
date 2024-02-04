@@ -1,5 +1,5 @@
 .map_wrapper {
-  padding: 50px 0;
+  padding: 30px 10px;
 
   & > * {
     paint-order: stroke;
@@ -16,6 +16,12 @@
     width: 100%;
     max-width: 1000px;
     position: relative;
+    overflow-x: scroll;
+
+    .inner {
+      min-width: 700px;
+      pointer-events: all;
+    }
 
     .popup {
       padding: 5px 10px;
