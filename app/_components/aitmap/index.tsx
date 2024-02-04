@@ -588,142 +588,142 @@ export default function AitMap(props: Props) {
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 1 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 1, room: 0 })}
+            onClick={() => setPickup({ facility: 1, room: 0, secret: 0 })}
             points="417.59 424.47 420.54 453.66 502.58 445.36 497.17 393.95 486.26 394.99 453.6 398.54 455.82 420.63 417.59 424.47"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 2 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 2, room: 0 })}
+            onClick={() => setPickup({ facility: 2, room: 0, secret: 0 })}
             points="413.3 312.37 414.65 328.83 458.24 324.69 456.75 308.34 413.3 312.37"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 3 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 3, room: 0 })}
+            onClick={() => setPickup({ facility: 3, room: 0, secret: 0 })}
             points="631.54 387.29 635.08 427.38 669.81 424.28 666.16 384.09 631.54 387.29"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 4 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 4, room: 0 })}
+            onClick={() => setPickup({ facility: 4, room: 0, secret: 0 })}
             points="740.55 439.09 743.03 470.78 804.84 465.95 802.5 435.97 779.32 437.78 778.94 433.02 754 434.98 754.23 438.02 740.55 439.09"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 5 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 5, room: 0 })}
+            onClick={() => setPickup({ facility: 5, room: 0, secret: 0 })}
             points="849.31 428.49 850.66 443.36 898.26 439.29 903.12 438.88 928.73 436.27 927.38 421.74 901.02 424.1 897.6 424.41 874.66 426.47 873.98 419.7 868.57 420.38 869.24 426.8 849.31 428.49"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 6 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 6, room: 0 })}
+            onClick={() => setPickup({ facility: 6, room: 0, secret: 0 })}
             points="868.05 456.45 869.38 471.75 915.91 467.71 914.58 452.37 899.1 453.72 898.51 446.95 903.77 446.5 903.12 438.88 898.26 439.29 898.58 442.91 889.21 443.72 889.32 449.63 883.42 450.4 883.91 455.08 868.05 456.45"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 7 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 7, room: 0 })}
+            onClick={() => setPickup({ facility: 7, room: 0, secret: 0 })}
             points="915.8 444.27 918.81 478.31 937.23 476.69 934.23 442.64 915.8 444.27"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 8 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 8, room: 0 })}
+            onClick={() => setPickup({ facility: 8, room: 0, secret: 0 })}
             points="890.77 299.74 852.06 302.68 852.57 310.73 855.76 310.36 856.13 316.89 895.95 313.84 896.62 322.21 898.81 321.98 900.34 321.83 899.56 313.48 920.45 312.19 919.35 297.44 911.6 298.08 890.77 299.74"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 9 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 9, room: 0 })}
+            onClick={() => setPickup({ facility: 9, room: 0, secret: 0 })}
             points="910.17 252.11 910.42 256.16 910.85 260.85 911.39 266.91 936.32 264.67 937.18 272.46 938.96 272.39 940.76 272.31 940.35 264.41 955.53 263.09 954.29 248.05 910.17 252.11"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 10 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 10, room: 0 })}
+            onClick={() => setPickup({ facility: 10, room: 0, secret: 0 })}
             points="745.9 336.77 747.44 352.77 756.48 351.83 757.17 358.63 757.86 358.59 762.25 358.26 798.03 355.03 795.15 325.11 754.65 329.02 755.25 335.88 745.9 336.77"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 11 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 11, room: 0 })}
+            onClick={() => setPickup({ facility: 11, room: 0, secret: 0 })}
             points="935.5 356.42 938.08 378.17 979.63 373.24 978.67 365.15 987.33 364.13 988.48 373.83 1027.55 369.2 1016.09 272.49 977.46 277.06 984.53 336.8 974.12 338.02 975.75 351.63 935.5 356.42"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 12 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 12, room: 0 })}
+            onClick={() => setPickup({ facility: 12, room: 0, secret: 0 })}
             points="567.77 308.56 570.46 344.57 653.6 338.38 652.67 325.94 650.57 326.09 650.21 321.34 653.48 321.1 653.08 315.9 645.59 316.47 645.01 308.71 580.76 313.51 580.32 307.63 567.77 308.56"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 13 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 13, room: 0 })}
+            onClick={() => setPickup({ facility: 13, room: 0, secret: 0 })}
             points="798.97 378.66 800.79 401.14 865.55 395.26 863.85 378.31 853.1 379.35 853.46 384.31 814.85 387.66 813.75 374.86 801.78 375.87 801.99 378.4 798.97 378.66"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 14 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 14, room: 0 })}
+            onClick={() => setPickup({ facility: 14, room: 0, secret: 0 })}
             points="462.9 327.09 461.02 311.84 472.88 310.94 472.12 303.17 472.81 301.96 473.89 301.14 475.1 301.14 476.09 301.66 476.62 302.54 476.66 303.24 483.63 302.68 483.8 301.49 484.52 300.54 485.57 300.09 486.88 300.02 487.7 300.52 488.33 301.37 488.55 302.61 489.12 309.59 528.7 305.86 529.68 305.86 530.48 306.26 531.13 306.98 531.35 308.07 531.2 309.13 530.5 309.84 529.62 310.1 525.88 310.57 527.35 321.91 462.9 327.09"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 15 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 15, room: 0 })}
+            onClick={() => setPickup({ facility: 15, room: 0, secret: 0 })}
             points="397.17 393.16 398.12 402.81 403.84 402.26 404.78 414.48 409.05 414.04 409.3 418.81 448.63 415.39 447.24 400.77 450.71 400.41 450.32 397.43 456.92 396.88 455.83 387.34 449.42 387.64 449.06 384.92 448.55 379.56 445.25 379.68 444.35 371.09 405.03 374.66 405.42 379.34 401.94 379.68 403.09 392.47 397.17 393.16"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 16 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 16, room: 0 })}
+            onClick={() => setPickup({ facility: 16, room: 0, secret: 0 })}
             points="448.55 379.56 449.06 384.92 484.99 381.51 486.26 394.99 497.17 393.95 495.99 381.5 501.22 381 500.54 373.91 495.22 374.41 493.46 355.86 523.1 353.06 521.62 337.39 487.54 340.61 480.97 341.24 451.12 344.06 454.43 379.01 448.55 379.56"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 17 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 17, room: 0 })}
+            onClick={() => setPickup({ facility: 17, room: 0, secret: 0 })}
             points="959.6 247.54 960.54 260.77 963.02 260.59 963.63 268.99 1007.87 265.82 1006.32 244.19 959.6 247.54"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 18 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 18, room: 0 })}
+            onClick={() => setPickup({ facility: 18, room: 0, secret: 0 })}
             points="686.8 455.45 687.8 466.31 691.64 465.97 692.41 474.43 731.19 470.89 728.96 446.57 689.44 450.18 689.91 455.17 686.8 455.45"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 19 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 19, room: 0 })}
+            onClick={() => setPickup({ facility: 19, room: 0, secret: 0 })}
             points="949.07 299.65 955.14 337.49 972.76 334.65 966.71 296.82 949.07 299.65"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 20 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 20, room: 0 })}
+            onClick={() => setPickup({ facility: 20, room: 0, secret: 0 })}
             points="404.17 336.77 406.87 364.71 443.58 361.52 440.88 333.57 404.17 336.77"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 21 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 21, room: 0 })}
+            onClick={() => setPickup({ facility: 21, room: 0, secret: 0 })}
             points="611.28 461.36 612.89 482.91 668.9 478.61 668.85 477.43 669.73 477.39 669.44 472.99 682.79 471.84 681.91 460.52 667.68 461.7 667.72 465 662.9 465.27 662.27 457.17 646.92 458.47 646.53 452.84 641.94 453.07 642.2 458.9 611.28 461.36"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 22 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 22, room: 0 })}
+            onClick={() => setPickup({ facility: 22, room: 0, secret: 0 })}
             points="803.05 329.86 805.33 354.56 835.21 351.72 834.9 346.11 841.42 345.56 842.31 354.3 856.09 352.97 854.92 340.61 854.39 334.85 853.75 328.06 840.72 329.31 840.13 321.95 832.87 322.69 833.07 327.01 803.05 329.86"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 23 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 23, room: 0 })}
+            onClick={() => setPickup({ facility: 23, room: 0, secret: 0 })}
             points="854.39 334.85 854.92 340.61 867.4 339.55 869.22 354.89 895.02 351.5 891.6 326.15 866.83 329.51 867.21 333.18 854.39 334.85"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 24 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 24, room: 0 })}
+            onClick={() => setPickup({ facility: 24, room: 0, secret: 0 })}
             points="829.84 526.24 830.94 541.95 832.03 541.89 832.59 549.86 854.16 548.47 858.14 548.14 864.59 547.7 864.05 539.47 865.13 539.41 864.07 523.77 863 523.82 862.49 515.63 830.42 517.85 830.88 526.23 829.84 526.24"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 25 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 25, room: 0 })}
+            onClick={() => setPickup({ facility: 25, room: 0, secret: 0 })}
             points="426.46 253.41 428.86 279.52 466.72 275.84 464.3 249.73 426.46 253.41"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 26 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 26, room: 0 })}
+            onClick={() => setPickup({ facility: 26, room: 0, secret: 0 })}
             points="652.18 273.27 654.16 297.07 685.4 294.08 683.41 270.3 652.18 273.27"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 27 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 27, room: 0 })}
+            onClick={() => setPickup({ facility: 27, room: 0, secret: 0 })}
             points="361.3 313.16 362.38 327.29 387.24 325.03 387.53 326.95 392.55 326.58 392.4 324.47 398.09 323.85 396.78 310.03 361.3 313.16"
           />
           <rect
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 28 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 28, room: 0 })}
+            onClick={() => setPickup({ facility: 28, room: 0, secret: 0 })}
             x="891.45"
             y="568.64"
             width="24.34"
@@ -732,32 +732,32 @@ export default function AitMap(props: Props) {
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 29 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 29, room: 0 })}
+            onClick={() => setPickup({ facility: 29, room: 0, secret: 0 })}
             points="532.41 500.38 537 560.68 559.21 558.97 558.48 549.64 561.23 549.34 560.59 541.09 557.73 541.24 555.89 517.22 570.94 515.68 567.76 482.27 564.39 482.52 566.62 506.4 555.12 507.56 554.5 498.67 532.41 500.38"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 30 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 30, room: 0 })}
+            onClick={() => setPickup({ facility: 30, room: 0, secret: 0 })}
             points="495.32 475.65 497.07 496.91 525.24 494.34 524.82 487.69 542.44 486.18 542.56 489.02 545.58 488.83 545.41 486 557.95 484.82 556.22 465.18 544 466.23 540.14 466.56 523.01 468.03 522.87 464.25 496.99 466.2 497.89 475.51 495.32 475.65"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 31 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 31, room: 0 })}
+            onClick={() => setPickup({ facility: 31, room: 0, secret: 0 })}
             points="568.13 476.99 568.38 479.92 570.42 479.74 570.71 483.04 574.57 482.71 575.23 490.65 576.36 490.55 576.9 496.94 600.26 494.96 599.75 488.94 600.93 488.84 600.27 480.93 604.1 480.61 603.75 476.49 602.38 476.61 602.21 474.61 603.56 474.49 603.21 470.19 599.37 470.5 598.72 462.6 572.44 464.77 573.11 472.94 569.64 473.23 569.94 476.86 568.13 476.99"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 32 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 32, room: 0 })}
+            onClick={() => setPickup({ facility: 32, room: 0, secret: 0 })}
             points="559.96 413.56 577.64 412.03 611.53 409.1 606.07 356.06 579.3 358.54 580.29 366.97 555.5 369.44 559.96 413.56"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 33 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 33, room: 0 })}
+            onClick={() => setPickup({ facility: 33, room: 0, secret: 0 })}
             points="499.46 359.64 500.54 373.91 501.22 381 502.12 394.61 503.9 410.88 536.8 407.75 535.61 396.51 535.16 393.33 545.5 392.29 546.24 390.84 548.04 387.71 548.58 385.13 548.64 382.45 547.94 378.72 547.04 376.13 544.25 371.66 541.67 369.43 537.95 367.43 532.83 366.84 531.93 356.45 499.46 359.64"
           />
           <rect
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 34 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 34, room: 0 })}
+            onClick={() => setPickup({ facility: 34, room: 0, secret: 0 })}
             x="736.81"
             y="378.43"
             width="50.77"
@@ -766,42 +766,42 @@ export default function AitMap(props: Props) {
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 35 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 35, room: 0 })}
+            onClick={() => setPickup({ facility: 35, room: 0, secret: 0 })}
             points="703.69 700.18 712.51 701.12 712.51 710.41 773.41 711.33 773.87 702.5 782.7 702.5 783.63 641.16 775.73 641.16 775.73 632.32 713.92 630.93 713.44 639.29 705.55 638.83 703.69 700.18"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 36 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 36, room: 0 })}
+            onClick={() => setPickup({ facility: 36, room: 0, secret: 0 })}
             points="1147.6 495.28 1152.77 508.16 1176.18 498.72 1171.71 487.24 1160.43 491.76 1159.88 490.26 1147.6 495.28"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 37 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 37, room: 0 })}
+            onClick={() => setPickup({ facility: 37, room: 0, secret: 0 })}
             points="673.44 780.06 710.79 784.05 713.07 762.57 675.73 758.59 673.44 780.06"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 38 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 38, room: 0 })}
+            onClick={() => setPickup({ facility: 38, room: 0, secret: 0 })}
             points="479.07 252.93 481.07 275.3 502.71 273.39 501.89 264.51 496.71 265 496.78 265.79 490.03 266.34 489.5 259.89 491.46 259.72 490.78 253.13 488.97 253.32 488.85 252.08 479.07 252.93"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 39 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 39, room: 0 })}
+            onClick={() => setPickup({ facility: 39, room: 0, secret: 0 })}
             points="805.93 623.5 849.16 624.88 848.7 626.29 863.34 626.99 864.03 609.09 832.19 607.47 831.73 615.59 805.93 614.89 805.93 623.5"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 40 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 40, room: 0 })}
+            onClick={() => setPickup({ facility: 40, room: 0, secret: 0 })}
             points="1204.49 763.48 1214.4 765.46 1215.25 761.03 1217.55 761.51 1219.05 753.32 1216.96 752.86 1217.75 748.63 1208.01 746.53 1204.49 763.48"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 41 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 41, room: 0 })}
+            onClick={() => setPickup({ facility: 41, room: 0, secret: 0 })}
             points="609.38 502.65 609.78 508.59 641.02 506.07 640.54 500.09 609.38 502.65"
           />
           <g
             className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 43, room: 0 })}
+            onClick={() => setPickup({ facility: 43, room: 0, secret: 0 })}
           >
             <rect
               x="821.51"
@@ -856,32 +856,32 @@ export default function AitMap(props: Props) {
           </g>
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 44 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 44, room: 0 })}
+            onClick={() => setPickup({ facility: 44, room: 0, secret: 0 })}
             points="583.25 514.33 587.57 562.47 611.37 560.84 611.91 558.68 652.46 555.44 647.6 506.22 606.51 509.47 607.05 512.18 583.25 514.33"
           />
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 45 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 45, room: 0 })}
+            onClick={() => setPickup({ facility: 45, room: 0, secret: 0 })}
             points="975.45 411.47 978.06 419.43 1017.52 531.07 1021.17 540.77 1026.98 550.48 1063.04 556.75 1129.17 532.41 1116.47 496.54 1071.07 391.07 1059.75 376.95 975.45 411.47"
           />
           <polygon
             className={`${styles.cls_1} ${styles.selectable} ${pickup.facility === 46 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 46, room: 0 })}
+            onClick={() => setPickup({ facility: 46, room: 0, secret: 0 })}
             points="872.82 708.38 938.87 714.8 932.08 698.56 929.81 688.74 924.53 667.61 924.91 638.55 928.68 630.62 929.81 610.24 888.14 605.57 875.84 604.19 872.82 708.38"
           />
           <polygon
             className={`${styles.cls_1} ${styles.selectable} ${pickup.facility === 46 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 46, room: 0 })}
+            onClick={() => setPickup({ facility: 46, room: 0, secret: 0 })}
             points="880.37 747.63 931.32 752.91 939.25 765.75 964.16 768.39 967.52 759.15 968.69 755.93 957.46 741.34 950.57 731.4 946.42 728 941.14 724.99 933.59 723.47 882.62 718.56 880.37 747.63"
           />
           <polygon
             className={`${styles.cls_1} ${styles.selectable} ${pickup.facility === 47 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 47, room: 0 })}
+            onClick={() => setPickup({ facility: 47, room: 0, secret: 0 })}
             points="931.85 636.91 935.57 675.96 941.15 694.55 950.44 695.48 953.57 709.31 998.78 739.16 1010.86 745.68 1095.45 714.07 1091.84 703.77 1050.83 586.72 1044.8 585.92 1015.51 582.07 1009.25 581.19 981.62 577.27 965.59 576.35 951.41 582.44 942.75 586.8 940.3 590.13 940.64 603 941.15 623.07 941.15 631.34 931.85 636.91"
           />
           <path
             className={`${styles.cls_1} ${styles.selectable} ${pickup.facility === 48 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 48, room: 0 })}
+            onClick={() => setPickup({ facility: 48, room: 0, secret: 0 })}
             d="M1127.5,728.03s12.87,31.93,17.17,31.22,43.32-8.39,52.78-10.88c7.03-1.85,1.71-14.68,4.11-19.02,2.92-5.27,16.18-6.39,13.72-10.79s-10.8-19.12-10.8-19.12l-76.99,28.58Z"
           />
           <path
@@ -890,37 +890,37 @@ export default function AitMap(props: Props) {
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 49 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 49, room: 0 })}
+            onClick={() => setPickup({ facility: 49, room: 0, secret: 0 })}
             points="302.29 667.45 304.17 669.41 348.31 625.9 346.44 623.99 302.29 667.45"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 50 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 50, room: 0 })}
+            onClick={() => setPickup({ facility: 50, room: 0, secret: 0 })}
             points="339.71 577.37 340.69 586.58 351.03 585.51 350.82 583.43 357.19 582.81 356.31 575.76 339.71 577.37"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 51 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 51, room: 0 })}
+            onClick={() => setPickup({ facility: 51, room: 0, secret: 0 })}
             points="721.69 787.46 797.18 793.33 798.58 780.75 770.06 772.64 722.8 774.32 721.69 787.46"
           />
           <polyline
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 52 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 52, room: 0 })}
+            onClick={() => setPickup({ facility: 52, room: 0, secret: 0 })}
             points="1086.09 298.39 1186.77 245.52 1210.5 264.41 1227.66 258.05 1235.55 280.2 1267.59 362.87 1285.54 413.12 1296.62 435.36 1265.64 460.27 1231.37 477.81 1204.67 481.34 1181.26 474.3 1162.36 465.18 1147.76 451.72 1086.09 298.39"
           />
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 53 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 53, room: 0 })}
+            onClick={() => setPickup({ facility: 53, room: 0, secret: 0 })}
             points="1059.57 593.28 1110.08 730.97 1217.75 691.89 1207.75 673.14 1160.57 567.57 1147.91 560.82 1059.57 593.28"
           />
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 54 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 54, room: 0 })}
+            onClick={() => setPickup({ facility: 54, room: 0, secret: 0 })}
             points="1217.94 600.84 1221.64 621.31 1235.42 643.94 1260.76 665.68 1291.25 677.79 1325.35 678.71 1358.1 668.45 1372.53 647.43 1378.82 621.15 1377.04 598.46 1368.47 570.74 1344.45 516.59 1327.6 510.77 1288.24 528.92 1256.82 546.72 1244.85 557.06 1225.68 579.87 1217.94 600.84"
           />
           <rect
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 55 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 55, room: 0 })}
+            onClick={() => setPickup({ facility: 55, room: 0, secret: 0 })}
             x="261.4"
             y="720.28"
             width="22.84"
@@ -929,12 +929,12 @@ export default function AitMap(props: Props) {
           />
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 42 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 42, room: 0 })}
+            onClick={() => setPickup({ facility: 42, room: 0, secret: 0 })}
             points="673.2 483.89 676.39 582.5 729.31 584.09 745.13 561.61 736.56 477.61 673.2 483.89"
           />
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 42 && styles.pickup}`}
-            onClick={() => setPickup({ facility: 42, room: 0 })}
+            onClick={() => setPickup({ facility: 42, room: 0, secret: 0 })}
             points="805.78 471.58 742.54 477.08 751.11 561.15 770.35 585.15 800.27 583.46 806.78 578.88 805.34 568.5 815.46 568.02 805.78 471.58"
           />
         </svg>

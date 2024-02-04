@@ -11,6 +11,7 @@ import styles from './index.module.scss';
 import { FACILITY_MAP, FacilityMap } from '@/const/facility';
 import { INIT_PICKUP, PickUp } from '@/const/pickup';
 import { ROOM_MAP, RoomMap } from '@/const/room';
+import { SECRET_MAP, SecretMap } from '@/const/secret';
 
 type Props = {
   pickup: PickUp;
@@ -41,6 +42,7 @@ export default function Search(props: Props) {
   const [searchWord, setSearchWord] = useState('');
   const [filterdFacility, setFilterdFacility] = useState([] as FacilityMap[]);
   const [filterdRoom, setFilterdRoom] = useState([] as RoomMap[]);
+  const [filterdSecret, setFilterdSecret] = useState([] as SecretMap[]);
 
   function search(e: ChangeEvent<HTMLInputElement>) {
     const { value } = e.target;
@@ -59,8 +61,16 @@ export default function Search(props: Props) {
     const resRoom = ROOM_MAP.filter((r) => {
       return r.room.includes(toHankakuUpperCase(searchWordSnap));
     });
+    const resSecret = SECRET_MAP.filter((s) => {
+      return s.word.includes(toHankakuUpperCase(searchWordSnap));
+    });
 
-    if (resFacility.length === 0 && resRoom.length === 0) return;
+    if (resFacility.length === 0 && resRoom.length === 0) {
+      setFilterdFacility([]);
+      setFilterdRoom([]);
+      setFilterdSecret(resSecret);
+      return;
+    }
 
     setPickup(INIT_PICKUP);
     setFilterdFacility(resFacility);
@@ -73,6 +83,7 @@ export default function Search(props: Props) {
     setPickup({
       facility: filterdFacility[0]?.id || filterdRoom[0]?.buildId || 0,
       room: filterdRoom[0]?.id || 0,
+      secret: 0,
     });
   };
 
@@ -98,7 +109,9 @@ export default function Search(props: Props) {
               key={r.room}
               className={`${styles.button} ${styles.room}`}
               data-active={pickup.room === r.id}
-              onClick={() => setPickup({ facility: r.buildId, room: r.id })}
+              onClick={() =>
+                setPickup({ facility: r.buildId, room: r.id, secret: 0 })
+              }
             >
               {r.room}({FACILITY_MAP.find((f) => f.id === r.buildId)?.name})
             </button>
@@ -116,7 +129,7 @@ export default function Search(props: Props) {
               key={f.id}
               className={styles.button}
               data-active={pickup.facility === f.id}
-              onClick={() => setPickup({ facility: f.id, room: 0 })}
+              onClick={() => setPickup({ facility: f.id, room: 0, secret: 0 })}
             >
               {f.name}
             </button>
@@ -125,6 +138,19 @@ export default function Search(props: Props) {
       )}
       {filterdFacility.length > MAX_DISPLAY && (
         <p className={styles.other}>他{filterdFacility.length - 15}件...</p>
+      )}
+      {filterdSecret.length > 0 && (
+        <div className={styles.buttons}>
+          {filterdSecret.slice(0, MAX_DISPLAY).map((s) => (
+            <button
+              key={s.word}
+              className={styles.button}
+              onClick={() => setPickup({ facility: 0, room: 0, secret: s.id })}
+            >
+              {s.word}
+            </button>
+          ))}
+        </div>
       )}
     </section>
   );
