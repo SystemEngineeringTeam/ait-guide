@@ -17,7 +17,7 @@ type Props = {
   setPickup: Dispatch<SetStateAction<PickUp>>;
 };
 
-const MAX_DISPLAY = 15;
+const MAX_DISPLAY = 10;
 
 // 文字列を半角,大文字に変換, ーをｰに変換, 、を,に変換, ひらがなをカタカナに変換
 function toHankakuUpperCase(str: string) {
@@ -91,37 +91,41 @@ export default function Search(props: Props) {
         onKeyDown={handleKeyDown}
       />
 
-      <div className={styles.buttons}>
-        {filterdRoom.slice(0, MAX_DISPLAY).map((r) => (
-          <button
-            key={r.room}
-            className={`${styles.button} ${styles.room}`}
-            data-active={pickup.room === r.id}
-            onClick={() => setPickup({ facility: r.buildId, room: r.id })}
-          >
-            {r.room}({FACILITY_MAP.find((f) => f.id === r.buildId)?.name})
-          </button>
-        ))}
-        {filterdRoom.length > MAX_DISPLAY && (
-          <p>他{filterdRoom.length - 15}件...</p>
-        )}
-      </div>
+      {filterdRoom.length > 0 && (
+        <div className={styles.buttons}>
+          {filterdRoom.slice(0, MAX_DISPLAY).map((r) => (
+            <button
+              key={r.room}
+              className={`${styles.button} ${styles.room}`}
+              data-active={pickup.room === r.id}
+              onClick={() => setPickup({ facility: r.buildId, room: r.id })}
+            >
+              {r.room}({FACILITY_MAP.find((f) => f.id === r.buildId)?.name})
+            </button>
+          ))}
+        </div>
+      )}
+      {filterdRoom.length > MAX_DISPLAY && (
+        <p className={styles.other}>他{filterdRoom.length - 15}件...</p>
+      )}
 
-      <div className={styles.buttons}>
-        {filterdFacility.slice(0, MAX_DISPLAY).map((f) => (
-          <button
-            key={f.id}
-            className={styles.button}
-            data-active={pickup.facility === f.id}
-            onClick={() => setPickup({ facility: f.id, room: 0 })}
-          >
-            {f.name}
-          </button>
-        ))}
-        {filterdFacility.length > MAX_DISPLAY && (
-          <p>他{filterdFacility.length - 15}件...</p>
-        )}
-      </div>
+      {filterdFacility.length > 0 && (
+        <div className={styles.buttons}>
+          {filterdFacility.slice(0, MAX_DISPLAY).map((f) => (
+            <button
+              key={f.id}
+              className={styles.button}
+              data-active={pickup.facility === f.id}
+              onClick={() => setPickup({ facility: f.id, room: 0 })}
+            >
+              {f.name}
+            </button>
+          ))}
+        </div>
+      )}
+      {filterdFacility.length > MAX_DISPLAY && (
+        <p className={styles.other}>他{filterdFacility.length - 15}件...</p>
+      )}
     </section>
   );
 }

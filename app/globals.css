@@ -1,10 +1,6 @@
 :root {
   font-size: 14px;
 
-  @media (min-width: 800px) {
-    font-size: 17px;
-  }
-
   --primary: #aae4ba;
   --primary-light: #e0fae9;
   --secondary: #aad3df;
@@ -24,6 +20,12 @@
   --header-height: 50px;
 }
 
+@media (min-width: 800px) {
+  :root {
+    font-size: 17px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,4 +34,5 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }

@@ -2,10 +2,6 @@
   padding: 30px 10px;
   text-align: center;
 
-  @media (min-width: 800px) {
-    padding: 50px;
-  }
-
   h2 {
     padding: 10px;
   }
@@ -21,16 +17,24 @@
     font-size: 1.2rem;
   }
 
+  .other {
+    line-height: 43px;
+  }
+
   .buttons {
-    padding: 15px 0;
+    padding-top: 20px;
     margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px 30px;
 
+    @media (max-width: 800px) {
+      gap: 10px;
+    }
+
     .button {
-      width: 200px;
+      width: 160px;
       padding: 7px 10px;
       font-size: 1rem;
       background-color: var(--white);
