@@ -52,6 +52,7 @@ export default function Search(props: Props) {
     if (searchWordSnap === '') {
       setFilterdFacility([]);
       setFilterdRoom([]);
+      setFilterdSecret([]);
       return;
     }
 
@@ -72,19 +73,20 @@ export default function Search(props: Props) {
       return;
     }
 
-    setPickup(INIT_PICKUP);
+    setPickup((prev) => ({ ...INIT_PICKUP, secret: prev.secret }));
     setFilterdFacility(resFacility);
     setFilterdRoom(resRoom);
+    setFilterdSecret([]);
   }
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.nativeEvent.isComposing || e.key !== 'Enter') return;
     if (filterdFacility.length + filterdRoom.length !== 1) return;
-    setPickup({
+    setPickup((prev) => ({
       facility: filterdFacility[0]?.id || filterdRoom[0]?.buildId || 0,
       room: filterdRoom[0]?.id || 0,
-      secret: 0,
-    });
+      secret: prev.secret,
+    }));
   };
 
   return (
@@ -110,7 +112,11 @@ export default function Search(props: Props) {
               className={`${styles.button} ${styles.room}`}
               data-active={pickup.room === r.id}
               onClick={() =>
-                setPickup({ facility: r.buildId, room: r.id, secret: 0 })
+                setPickup((prev) => ({
+                  facility: r.buildId,
+                  room: r.id,
+                  secret: prev.secret,
+                }))
               }
             >
               {r.room}({FACILITY_MAP.find((f) => f.id === r.buildId)?.name})
@@ -129,7 +135,13 @@ export default function Search(props: Props) {
               key={f.id}
               className={styles.button}
               data-active={pickup.facility === f.id}
-              onClick={() => setPickup({ facility: f.id, room: 0, secret: 0 })}
+              onClick={() =>
+                setPickup((prev) => ({
+                  facility: f.id,
+                  room: 0,
+                  secret: prev.secret,
+                }))
+              }
             >
               {f.name}
             </button>

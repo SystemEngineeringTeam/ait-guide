@@ -2,15 +2,13 @@
   position: fixed;
   bottom: 0;
   left: 30px;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
 
   .penguin {
     position: absolute;
     bottom: 0;
     animation: surfing-y 2s infinite ease-in-out;
     animation-direction: alternate;
+    cursor: pointer;
 
     .penguin_body {
       height: 150px;

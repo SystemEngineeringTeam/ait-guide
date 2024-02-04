@@ -16,7 +16,7 @@ export default function Home() {
       <Search pickup={pickup} setPickup={setPickup} />
       <AitMap pickup={pickup} setPickup={setPickup} />
       <FacilityList pickup={pickup} setPickup={setPickup} />
-      <Penguin active={pickup.secret === 1} />
+      <Penguin active={pickup.secret === 1} setPickup={setPickup} />
     </main>
   );
 }
