@@ -4,7 +4,7 @@
   & > * {
     paint-order: stroke;
     transition: all 0.3s ease;
-    pointer-events: none;
+    // pointer-events: none;
   }
 
   h2 {
@@ -15,12 +15,12 @@
     margin-inline: auto;
     width: 100%;
     max-width: 1000px;
-    position: relative;
     overflow-x: scroll;
-
+    
     .inner {
       min-width: 700px;
       pointer-events: all;
+      position: relative;
     }
 
     .popup {
