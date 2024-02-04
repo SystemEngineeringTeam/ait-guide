@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import styles from './index.module.scss';
 import { FACILITY_MAP } from '@/const/facility';
 import { PickUp } from '@/const/pickup';
-import { toPercent } from '@/util/convertCoordinates';
+import { toPercent, toValidCoordinate } from '@/util/convertCoordinates';
 
 type Props = {
   pickup: PickUp;
@@ -24,7 +24,8 @@ export default function AitMap(props: Props) {
     if (!navigator.geolocation) return;
     navigator.permissions.query({ name: 'geolocation' });
     navigator.geolocation.watchPosition((e) => {
-      setPrecent(toPercent(e.coords.latitude, e.coords.longitude));
+      const coords = toValidCoordinate(e.coords.latitude, e.coords.longitude);
+      setPrecent(coords && toPercent(coords[0], coords[1]));
     });
   }, []);
 
