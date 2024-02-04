@@ -159,7 +159,7 @@ export default function Search(props: Props) {
               className={styles.button}
               onClick={() => {
                 if (s.event) s.event();
-                setPickup({ facility: 0, room: 0, secret: s.id });
+                else setPickup({ facility: 0, room: 0, secret: s.id });
               }}
             >
               {s.word}
