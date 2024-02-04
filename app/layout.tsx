@@ -10,9 +10,19 @@ const noto = Shippori_Mincho({
   weight: ['400', '500', '600', '700', '800'],
 });
 
+const title = 'AITガイド';
+const description = '愛工大の施設の位置や経路を確認できます';
+
 export const metadata: Metadata = {
-  title: 'AITガイド',
-  description: '愛工大の施設の位置や経路を確認できます',
+  title,
+  description,
+  metadataBase: new URL('https://ait-guide.sysken.net/'),
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    site: '@set_official',
+  },
 };
 
 export default function RootLayout({
