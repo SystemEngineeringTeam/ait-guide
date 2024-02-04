@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import styles from './index.module.scss';
 import { GROUPED_FACILITY_MAP } from '@/const/facility';
-import { INIT_PICKUP, PickUp } from '@/const/pickup';
+import { PickUp } from '@/const/pickup';
 
 type Props = {
   pickup: PickUp;
@@ -12,7 +12,7 @@ export default function FacilityList(props: Props) {
   const { pickup, setPickup } = props;
 
   function changePickup(id: number) {
-    setPickup((p) => (p.facility === id ? INIT_PICKUP : p));
+    setPickup((p) => ({ ...p, facility: id }));
   }
 
   return (
