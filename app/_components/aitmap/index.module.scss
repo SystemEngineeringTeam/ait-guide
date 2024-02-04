@@ -82,6 +82,10 @@
       fill: var(--primary-light);
     }
 
+    .selectable {
+      cursor: pointer;
+    }
+
     .pickup,
     .pickup * {
       fill: var(--tertiary);

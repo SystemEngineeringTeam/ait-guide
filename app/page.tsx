@@ -13,7 +13,7 @@ export default function Home() {
     <main className={styles.main}>
       <Search />
       <FacilityList pickup={pickup} setPickup={setPickup} />
-      <AitMap pickup={pickup} />
+      <AitMap pickup={pickup} setPickup={setPickup} />
     </main>
   );
 }
