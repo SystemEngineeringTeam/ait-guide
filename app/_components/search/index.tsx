@@ -1,6 +1,12 @@
 'use client';
 
-import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
+import {
+  ChangeEvent,
+  Dispatch,
+  KeyboardEvent,
+  SetStateAction,
+  useState,
+} from 'react';
 import styles from './index.module.scss';
 import { FACILITY_MAP, FacilityMap } from '@/const/facility';
 import { INIT_PICKUP, PickUp } from '@/const/pickup';
@@ -61,6 +67,15 @@ export default function Search(props: Props) {
     setFilterdRoom(resRoom);
   }
 
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.nativeEvent.isComposing || e.key !== 'Enter') return;
+    if (filterdFacility.length + filterdRoom.length !== 1) return;
+    setPickup({
+      facility: filterdFacility[0]?.id || filterdRoom[0]?.buildId || 0,
+      room: filterdRoom[0]?.id || 0,
+    });
+  };
+
   return (
     <section className={styles.search_wrapper} id="search">
       <h2>
@@ -73,6 +88,7 @@ export default function Search(props: Props) {
         className={styles.search}
         value={searchWord}
         onChange={search}
+        onKeyDown={handleKeyDown}
       />
 
       <div className={styles.buttons}>
