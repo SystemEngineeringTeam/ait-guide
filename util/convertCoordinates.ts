@@ -1,7 +1,7 @@
 const maxLat = 35.185835318281335;
 const minLat = 35.18070760286929;
-const maxLng = 137.11979269981387;
-const minLng = 137.10864007472995;
+const maxLng = 137.1198156571;
+const minLng = 137.1098013714;
 
 /**
  * 緯度経度をパーセントに変換する
