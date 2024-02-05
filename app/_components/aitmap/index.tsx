@@ -773,16 +773,15 @@ export default function AitMap(props: Props) {
             onClick={() => setPickup((prev) => ({ ...prev, facility: 41 }))}
             points="609.38 502.65 609.78 508.59 641.02 506.07 640.54 500.09 609.38 502.65"
           />
-          <g
-            className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
-            onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
-          >
+          <g>
             <rect
               x="821.51"
               y="626.74"
               width="5.35"
               height="29.06"
               transform="translate(160.99 1447.92) rotate(-88.46)"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
             />
             <rect
               x="821.38"
@@ -790,6 +789,8 @@ export default function AitMap(props: Props) {
               width="5.35"
               height="29.06"
               transform="translate(152.51 1455.73) rotate(-88.45)"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
             />
             <rect
               x="821.38"
@@ -797,6 +798,8 @@ export default function AitMap(props: Props) {
               width="5.35"
               height="29.06"
               transform="translate(136.25 1471.56) rotate(-88.45)"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
             />
             <rect
               x="820.46"
@@ -804,19 +807,47 @@ export default function AitMap(props: Props) {
               width="5.35"
               height="29.06"
               transform="translate(127.57 1478.42) rotate(-88.46)"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
             />
-            <polygon points="808.54 684.33 837.59 685.11 837.73 679.78 808.69 678.99 808.54 684.33" />
-            <polygon points="809.46 660.16 838.51 660.96 838.66 655.61 809.61 654.83 809.46 660.16" />
-            <polygon points="841.41 693.05 866.98 693.83 867.13 688.72 841.57 687.95 841.41 693.05" />
-            <polygon points="841.41 685.61 866.98 686.4 867.13 681.28 841.57 680.51 841.41 685.61" />
-            <polygon points="811.66 692.13 837.23 692.9 837.39 687.8 811.82 687.01 811.66 692.13" />
-            <polygon points="842.34 645.18 867.91 645.96 868.06 640.84 842.5 640.08 842.34 645.18" />
+            <polygon
+              points="808.54 684.33 837.59 685.11 837.73 679.78 808.69 678.99 808.54 684.33"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
+            <polygon
+              points="809.46 660.16 838.51 660.96 838.66 655.61 809.61 654.83 809.46 660.16"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
+            <polygon
+              points="841.41 693.05 866.98 693.83 867.13 688.72 841.57 687.95 841.41 693.05"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
+            <polygon
+              points="841.41 685.61 866.98 686.4 867.13 681.28 841.57 680.51 841.41 685.61"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
+            <polygon
+              points="811.66 692.13 837.23 692.9 837.39 687.8 811.82 687.01 811.66 692.13"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
+            <polygon
+              points="842.34 645.18 867.91 645.96 868.06 640.84 842.5 640.08 842.34 645.18"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
             <rect
               x="852.65"
               y="637.9"
               width="5.1"
               height="25.57"
               transform="translate(179.07 1485.91) rotate(-88.27)"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
             />
             <rect
               x="852.65"
@@ -824,9 +855,19 @@ export default function AitMap(props: Props) {
               width="5.1"
               height="25.57"
               transform="translate(171.03 1493.7) rotate(-88.27)"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
             />
-            <polygon points="841.88 669.34 867.44 670.13 867.6 665.02 842.03 664.25 841.88 669.34" />
-            <polygon points="841.88 677.25 867.44 678.02 867.6 672.92 842.03 672.14 841.88 677.25" />
+            <polygon
+              points="841.88 669.34 867.44 670.13 867.6 665.02 842.03 664.25 841.88 669.34"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
+            <polygon
+              points="841.88 677.25 867.44 678.02 867.6 672.92 842.03 672.14 841.88 677.25"
+              className={`${styles.cls_17} ${styles.selectable} ${pickup.facility === 43 && styles.pickup}`}
+              onClick={() => setPickup((prev) => ({ ...prev, facility: 43 }))}
+            />
           </g>
           <polygon
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 44 && styles.pickup}`}
