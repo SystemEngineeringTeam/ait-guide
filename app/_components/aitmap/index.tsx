@@ -558,7 +558,7 @@ export default function AitMap(props: Props) {
           />
           <polygon
             className={styles.cls_15}
-            points="878.77 793.13 878.3 783.84 873.19 778.26 875.51 768.04 872.92 761.84 871.33 746.2 858.32 755.96 846.7 760.61 792.27 747.59 779.73 747.12 770.9 749.91 743.94 754.56 670.23 746.2 650.66 784.05 764.04 794.45 776.21 801.44 828.23 807.22 873.31 806.76 881.56 802.9 878.77 793.13"
+            points="846.7 760.61 858.32 755.96 871.33 746.2 872.92 761.84 875.51 768.04 873.19 778.26 878.3 783.84 878.77 793.13 881.56 802.9 873.31 806.76 842.34 807.08 848.69 787.24 846.7 760.61"
           />
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 1 && styles.pickup}`}
@@ -916,7 +916,7 @@ export default function AitMap(props: Props) {
           <polygon
             className={`${styles.cls_10} ${styles.selectable} ${pickup.facility === 51 && styles.pickup}`}
             onClick={() => setPickup((prev) => ({ ...prev, facility: 51 }))}
-            points="721.69 787.46 797.18 793.33 798.58 780.75 770.06 772.64 722.8 774.32 721.69 787.46"
+            points="721.69 784.26 846.7 793.33 846.7 760.61 792.27 747.59 743.94 754.56 723.49 752.28 721.69 784.26"
           />
           <polyline
             className={`${styles.cls_4} ${styles.selectable} ${pickup.facility === 52 && styles.pickup}`}

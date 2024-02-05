@@ -1,7 +1,7 @@
 .map_wrapper {
   padding: 30px 10px;
 
-  & * {
+  * {
     paint-order: stroke;
     transition: all 0.3s ease;
     pointer-events: none;
