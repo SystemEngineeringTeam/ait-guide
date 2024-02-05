@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from './index.module.scss';
 import Popup from './popup';
 import PrecentLocation from './precent';
+import syscat from '@/assets/syscat.webp';
 import { FACILITY_MAP } from '@/const/facility';
 import { PickUp } from '@/const/pickup';
 import { toPercent } from '@/util/convertCoordinates';
@@ -26,6 +27,12 @@ export default function AitMap(props: Props) {
       <div className={styles.map_container}>
         <Popup position={position} name={facility?.name} />
         <PrecentLocation />
+
+        <img
+          className={`${styles.syscat} ${pickup.facility === -1 && styles.selected}`}
+          src={syscat.src}
+          alt="シスキャット"
+        />
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="170 170 1250 700">
           <polygon

@@ -51,6 +51,7 @@ export const FACILITY_MAP: FacilityMap[] = [
   { id: 26, name: "振動実験棟", coordinate: [35.18501101642313, 137.1131139993668], type: 4, candidate: [] },
   { id: 27, name: "地域防災研究センター", coordinate: [35.18475234138968, 137.1105390787125], type: 4, candidate: [] },
   { id: 28, name: "エコ電力研究センター", coordinate: [35.182840751211785, 137.11528122425082], type: 4, candidate: [] },
+  { id: -1, name: "システム工学研究会", coordinate: [35.18521269469156, 137.11530804634097], type: 4, candidate: ["シス研", "シスケン"] },
   { id: 38, name: "第3クラブハウス", coordinate: [35.18512500854939, 137.11148858070376], type: 5, candidate: [] },
   { id: 39, name: "第4クラブハウス", coordinate: [35.182586453717065, 137.11463212966922], type: 5, candidate: [] },
   { id: 40, name: "第5クラブハウス", coordinate: [35.18156487128013, 137.11795270442965], type: 5, candidate: [] },

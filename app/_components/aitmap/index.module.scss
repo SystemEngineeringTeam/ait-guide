@@ -17,6 +17,20 @@
     max-width: 1000px;
     position: relative;
 
+    .syscat {
+      width: 40px;
+      position: absolute;
+      top: 11%;
+      left: 56%;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 900;
+
+      &.selected {
+        opacity: 1;
+      }
+    }
+
     .cls_1 {
       fill: #f1eefd;
     }
