@@ -12,7 +12,7 @@ export default function Popup({ name, position }: Props) {
       style={{
         display: position && name ? 'block' : 'none',
         bottom: `${position && position[0]}%`,
-        left: `calc(35px + ${position && position[1]}%)`,
+        left: `${position && position[1]}%`,
       }}
     >
       {name}
