@@ -86,6 +86,8 @@
     }
 
     .selectable {
+      stroke: var(--black);
+      stroke-width: 0.5px;
       cursor: pointer;
       pointer-events: all;
     }
