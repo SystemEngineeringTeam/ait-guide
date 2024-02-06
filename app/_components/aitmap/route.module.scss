@@ -2,4 +2,18 @@
   fill: transparent;
   stroke: var(--blue);
   stroke-width: 4px;
+  pointer-events: all;
+}
+
+.start {
+  transition: none;
+  stroke: var(--blue);
+  stroke-width: 4px;
+  fill: var(--white);
+}
+
+.end {
+  transition: none;
+  fill: var(--blue);
+  stroke-width: 8px;
 }

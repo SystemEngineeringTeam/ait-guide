@@ -22,6 +22,8 @@ export default function Route() {
     [35.18256891592947, 137.11022794246676],
     [35.182393537845485, 137.11002945899966],
   ]);
+  const [start, setStart] = useState<Point | null>(null);
+  const [end, setEnd] = useState<Point | null>(null);
   const [draw, setDaraw] = useState('');
 
   useEffect(() => {
@@ -33,7 +35,20 @@ export default function Route() {
       })
       .join(', ');
     setDaraw(d);
+
+    const startCoord = points.at(0);
+    const endCoord = points.at(-1);
+    if (startCoord) setStart(convertSvgPoint(startCoord));
+    if (endCoord) setEnd(convertSvgPoint(endCoord));
   }, [points]);
 
-  return <path d={draw} className={styles.path} />;
+  return (
+    <g>
+      <path d={draw} className={styles.path} />
+      {start && (
+        <circle cx={start[0]} cy={start[1]} r="5" className={styles.start} />
+      )}
+      {end && <circle cx={end[0]} cy={end[1]} r="10" className={styles.end} />}
+    </g>
+  );
 }
