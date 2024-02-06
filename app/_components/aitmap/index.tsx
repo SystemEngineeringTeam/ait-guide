@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from './index.module.scss';
 import Popup from './popup';
 import PrecentLocation from './precent';
+import Route from './route';
 import syscat from '@/assets/syscat.webp';
 import { FACILITY_MAP } from '@/const/facility';
 import { PickUp } from '@/const/pickup';
@@ -959,6 +960,7 @@ export default function AitMap(props: Props) {
             onClick={() => setPickup((prev) => ({ ...prev, facility: 42 }))}
             points="805.78 471.58 742.54 477.08 751.11 561.15 770.35 585.15 800.27 583.46 806.78 578.88 805.34 568.5 815.46 568.02 805.78 471.58"
           />
+          <Route />
         </svg>
       </div>
     </section>

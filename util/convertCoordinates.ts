@@ -1,7 +1,4 @@
-const maxLat = 35.185835318281;
-const minLat = 35.180707602869;
-const maxLng = 137.12010514888;
-const minLng = 137.10891062565;
+import { MAX_LAT, MAX_LNG, MIN_LAT, MIN_LNG } from "@/const/map";
 
 /**
  * 緯度経度をパーセントに変換する
@@ -11,8 +8,8 @@ const minLng = 137.10891062565;
  */
 export function toPercent(lat: number, lng: number): [number, number] {
 
-  const latPercent = (lat - minLat) / (maxLat - minLat) * 100;
-  const lngPercent = (lng - minLng) / (maxLng - minLng) * 100;
+  const latPercent = (lat - MIN_LAT) / (MAX_LAT - MIN_LAT) * 100;
+  const lngPercent = (lng - MIN_LNG) / (MAX_LNG - MIN_LNG) * 100;
 
   return [latPercent, lngPercent];
 }
@@ -24,10 +21,10 @@ export function toPercent(lat: number, lng: number): [number, number] {
  * @returns null or [緯度, 経度]
  */
 export function toValidCoordinate(lat: number, lng: number): [number, number] | null {
-  if (lat < minLat) return null;
-  if (lat > maxLat) return null;
-  if (lng < minLng) return null;
-  if (lng > maxLng) return null;
+  if (lat < MIN_LAT) return null;
+  if (lat > MAX_LAT) return null;
+  if (lng < MIN_LNG) return null;
+  if (lng > MAX_LNG) return null;
 
   return [lat, lng];
 }
