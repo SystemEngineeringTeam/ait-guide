@@ -20,11 +20,11 @@ export function toPercent(lat: number, lng: number): [number, number] {
  * @param lng 経度
  * @returns null or [緯度, 経度]
  */
-export function toValidCoordinate(lat: number, lng: number): [number, number] | null {
-  if (lat < MIN_LAT) return null;
-  if (lat > MAX_LAT) return null;
-  if (lng < MIN_LNG) return null;
-  if (lng > MAX_LNG) return null;
+export function toValidCoordinate(lat: number, lng: number): [number, number] | undefined {
+  if (lat < MIN_LAT) return undefined;
+  if (lat > MAX_LAT) return undefined;
+  if (lng < MIN_LNG) return undefined;
+  if (lng > MAX_LNG) return undefined;
 
   return [lat, lng];
 }

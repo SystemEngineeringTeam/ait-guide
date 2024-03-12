@@ -1,30 +1,24 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import styles from './precent.module.scss';
-import { toPercent, toValidCoordinate } from '@/util/convertCoordinates';
+import { toPercent } from '@/util/convertCoordinates';
 
-type Precent = [number, number] | null;
+type PrecentLocationProps = {
+  location: [number, number] | undefined;
+};
 
-export default function PrecentLocation() {
-  const [precent, setPrecent] = useState<Precent>(null);
+export default function PrecentLocation(props: PrecentLocationProps) {
+  const { location } = props;
 
-  useEffect(() => {
-    if (!navigator.geolocation) return;
-    navigator.permissions.query({ name: 'geolocation' });
-    navigator.geolocation.watchPosition((e) => {
-      const coords = toValidCoordinate(e.coords.latitude, e.coords.longitude);
-      setPrecent(coords && toPercent(coords[0], coords[1]));
-    });
-  }, []);
+  const point = location && toPercent(location[0], location[1]);
 
   return (
     <div
       className={styles.precent_location}
       style={{
-        display: precent ? 'block' : 'none',
-        bottom: `${precent && precent[0]}%`,
-        left: `${precent && precent[1]}%`,
+        display: point ? 'block' : 'none',
+        bottom: `${point && point[0]}%`,
+        left: `${point && point[1]}%`,
       }}
     />
   );

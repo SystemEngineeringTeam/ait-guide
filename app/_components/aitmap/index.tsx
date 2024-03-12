@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import styles from './index.module.scss';
 import Popup from './popup';
 import PrecentLocation from './precent';
@@ -8,6 +8,7 @@ import Route from './route';
 import syscat from '@/assets/syscat.webp';
 import { FACILITY_MAP } from '@/const/facility';
 import { PickUp } from '@/const/pickup';
+import { Precent, useLocation } from '@/hooks/useLocation';
 import { toPercent } from '@/util/convertCoordinates';
 
 type Props = {
@@ -15,11 +16,55 @@ type Props = {
   setPickup: Dispatch<SetStateAction<PickUp>>;
 };
 
+type Coordinate = { lat: number; lng: number };
+
+const fetchRoute = async (
+  current: Precent | undefined,
+  facilityId: number,
+): Promise<Coordinate[] | undefined> => {
+  if (!current) return undefined;
+
+  const apiHost = process.env.NEXT_PUBLIC_API_URL;
+
+  if (apiHost === undefined) {
+    throw new Error('process.env.NEXT_PUBLIC_API_URL is undefined');
+  }
+
+  const url = new URL('/api/get/route', apiHost);
+  url.searchParams.append('lat', current[0].toString());
+  url.searchParams.append('lng', current[1].toString());
+  url.searchParams.append('end', facilityId.toString());
+
+  const res = await fetch(url.toString())
+    .then((res) => res.json())
+    .then((data) => data as { route: Coordinate[] | null })
+    .catch((e) => {
+      console.error(e);
+      return undefined;
+    });
+
+  if (!res || !res.route) return undefined;
+  return res.route;
+};
+
 export default function AitMap(props: Props) {
   const { pickup, setPickup } = props;
 
+  const location = useLocation();
   const facility = FACILITY_MAP.find((f) => f.id === pickup.facility);
   const position = facility && toPercent(...facility.coordinate);
+  const [route, setRoute] = useState<Coordinate[] | undefined>();
+
+  useEffect(() => {
+    const { facility } = pickup;
+
+    if (facility === 0) return;
+
+    (async () => {
+      const res = await fetchRoute(location, facility);
+      setRoute(res);
+    })();
+  }, [location, pickup]);
 
   return (
     <section className={styles.map_wrapper} id="map">
@@ -27,7 +72,7 @@ export default function AitMap(props: Props) {
 
       <div className={styles.map_container}>
         <Popup position={position} name={facility?.name} />
-        <PrecentLocation />
+        <PrecentLocation location={location} />
 
         <img
           className={`${styles.syscat} ${pickup.facility === -1 && styles.selected}`}
@@ -960,7 +1005,7 @@ export default function AitMap(props: Props) {
             onClick={() => setPickup((prev) => ({ ...prev, facility: 42 }))}
             points="805.78 471.58 742.54 477.08 751.11 561.15 770.35 585.15 800.27 583.46 806.78 578.88 805.34 568.5 815.46 568.02 805.78 471.58"
           />
-          <Route />
+          <Route route={route} />
         </svg>
       </div>
     </section>
