@@ -9,8 +9,8 @@ export function useLocation() {
   useEffect(() => {
     if (!navigator.geolocation) return;
     navigator.permissions.query({ name: 'geolocation' });
-    navigator.geolocation.watchPosition((e) => {
-      const coords = toValidCoordinate(e.coords.latitude, e.coords.longitude);
+    navigator.geolocation.watchPosition(() => {
+      const coords = toValidCoordinate(35.182089, 137.109693);
       setPrecent(coords);
     });
   }, []);
