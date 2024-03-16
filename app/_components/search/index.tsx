@@ -7,6 +7,7 @@ import {
   SetStateAction,
   useState,
 } from 'react';
+import Comment from '../../_components/comment';
 import styles from './index.module.scss';
 import { FACILITY_MAP, FacilityMap } from '@/const/facility';
 import { INIT_PICKUP, PickUp } from '@/const/pickup';
@@ -35,6 +36,8 @@ function toHankakuUpperCase(str: string) {
       return String.fromCharCode(s.charCodeAt(0) + 0x60);
     });
 }
+
+const comment = `<input type="text" class="search_search__5nzsa" value="ペンギン" \>`;
 
 export default function Search(props: Props) {
   const { pickup, setPickup } = props;
@@ -103,6 +106,7 @@ export default function Search(props: Props) {
         onChange={search}
         onKeyDown={handleKeyDown}
       />
+      <Comment text={comment} />
 
       {filterdRoom.length > 0 && (
         <div className={styles.buttons}>

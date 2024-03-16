@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+import Comment from '../../_components/comment';
 import styles from './index.module.scss';
 import { GROUPED_FACILITY_MAP } from '@/const/facility';
 import { PickUp } from '@/const/pickup';
@@ -29,6 +30,7 @@ export default function FacilityList(props: Props) {
                 onClick={() => changePickup(facility.id)}
               >
                 {facility.name}
+                <Comment text="シカ🦌" />
               </button>
             ))}
           </div>

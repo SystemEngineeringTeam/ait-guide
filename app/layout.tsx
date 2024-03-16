@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Shippori_Mincho } from 'next/font/google';
 import { ReactNode } from 'react';
+import Comment from './_components/comment';
 import Footer from './_components/footer';
 import Header from './_components/header';
 import './globals.css';
@@ -25,12 +26,16 @@ export const metadata: Metadata = {
   },
 };
 
+const comment =
+  '[ 👀 ] ソースコードをのぞく時ソースコードもまたこちらをのぞいているのだ...!';
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="ja">
       <body className={noto.className}>
+        <Comment text={comment} />
         <Header />
         {children}
         <Footer />
