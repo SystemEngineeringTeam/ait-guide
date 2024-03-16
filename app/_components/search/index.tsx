@@ -37,7 +37,7 @@ function toHankakuUpperCase(str: string) {
     });
 }
 
-const comment = `<input type="text" class="search_search__5nzsa" value="ペンギン" \>`;
+const comment = `<input type="text" class="search_search__5nzsa" value="ペンギン" \\>`;
 
 export default function Search(props: Props) {
   const { pickup, setPickup } = props;
