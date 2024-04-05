@@ -8,7 +8,7 @@ import SyskenParam from './_components/syskenParam/SyskenParam';
 import styles from './page.module.scss';
 import { INIT_PICKUP, PickUp } from '@/const/pickup';
 
-export function Home() {
+export default function Home() {
   const [pickup, setPickup] = useState<PickUp>(INIT_PICKUP);
 
   return (
