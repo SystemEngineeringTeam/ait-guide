@@ -61,6 +61,12 @@ export default function AitMap(props: Props) {
     if (facility === 0) return;
 
     (async () => {
+      // hotfix: シス研を4号別館扱いにする
+      if (facility === -1) {
+        const res = await fetchRoute(location, 9);
+        setRoute(res);
+        return;
+      }
       const res = await fetchRoute(location, facility);
       setRoute(res);
     })();
