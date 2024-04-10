@@ -1,7 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Dispatch, SetStateAction } from 'react';
 import { PickUp } from '@/const/pickup';
 
@@ -14,14 +14,23 @@ export default function SyskenParam(props: Props) {
 
   const searchParams = useSearchParams();
   const sysken = searchParams.get('sysken');
+  const facility = searchParams.get('facility');
 
-  if (sysken !== null) {
-    setPickup({
-      facility: -1,
-      room: 0,
-      secret: 0,
-    });
-  }
+  useEffect(() => {
+    if (sysken !== null) {
+      setPickup({
+        facility: -1,
+        room: 0,
+        secret: 0,
+      });
+    } else if (facility !== null) {
+      setPickup({
+        facility: parseInt(facility, 10),
+        room: 0,
+        secret: 0,
+      });
+    }
+  }, [facility, setPickup, sysken]);
 
   return <Fragment />;
 }
